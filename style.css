@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    background-color: rgb(255, 251, 213);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+}
+
+h1 {
+    text-indent: 20px;
+    font-size: 250%;
+}
+
+h4 {
+    text-indent: 5%;
+    font-weight: bold;
+    font-size: 125%;
+    color: black;
+}
+
+p {
+    text-indent: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+  
+nav li {
+    float: left;
+}
+  
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+  /* Change the link color to #111 (black) on hover */
+nav li a:hover {
+    background-color: #111;
+}
+
+nav li .active {
+    color: black;
+    background-color: yellow;
+}
+
+nav li .active:hover {
+    color: white;
+}
+
+table {
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+h1 img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: 0% 0;
+}
+
+figure img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figure figcaption {
+    text-align: center;
+}
+
+img {
+    width: 30%;
+    height: auto;
+    padding: 5px;
+}
+
+iframe {
+    margin: 20px;
+}
+
+.footer {
+    clear: both;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+    font-size: 75%;
+    text-align: center;
+}
+
+.footer a {
+    color: #807c72;
+}
+
+.footer a:hover {
+    color: black;
+}
+
+form {
+    background-color: white;
+    margin: 20px;
+}
+
+form p {
+    text-indent: 0px;
+}
