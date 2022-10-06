@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'merriweather';
+    src: url('../fonts/Merriweather-Regular.ttf');
+}
+@font-face {
+    font-family: 'cabin';
+    src: url('../fonts/Cabin-VariableFont_wdth,wght.ttf');
+}
+body {
+    margin: 0;
+    font-family: 'cabin';
+    font-size: 1em;
+}
+h1, h2, h3 {
+    font-family: 'merriweather';
+    color: #67219D;
+}
+h2 {
+    font-size: 2em;
+}
+h3 {
+    font-size: 1.5em;
+}
+header {
+    background-color: #7C3CAE;
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+header img {
+    min-width: 150px;
+    width: 12%;
+    margin: 2% 6%;
+}
+header nav {
+    padding-bottom: 1%;
+    padding-top: 1%;
+    background-color:#67219D;
+}
+header nav li a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    
+}
+header nav a:hover {
+    text-decoration: underline;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+header li {
+    display: inline;
+    padding: 5% 5% 5% 2%;
+    text-decoration:none;
+}
+#content {
+    width: 90%;
+    margin: 5%;
+}
+
+#about {
+    display: inline-block;
+}
+#about h2 {
+    margin-bottom: 1%;
+}
+#about .c1 {
+    width: 35%;
+    margin-right: 5%;
+    float: left;
+}
+
+#about .c2 img {
+    width: 60%;
+}
+
+#events {
+    background-color: #D5B3F0;
+    padding: 2%;
+    padding-bottom: 5%;
+    padding-top: 0.5%;
+    display: inline-block;
+}
+#events .c1 img {
+    width: 32%;
+    min-height: 180px;
+    margin-right: 5%;
+    float: left;
+    object-fit: cover;
+}
+#events .c2 button {
+    float: right;
+    clear: both;
+    margin-right: 5%;
+    color: white;
+    border: none;
+    text-align: center;
+    background-color:#67219D;
+    padding: 1%;
+}
+#events .c2 button:hover {
+    background-color:#7C3CAE;
+}
+
+#observing {
+    margin: auto;
+}
+#observing .c1, #observing .c2, #observing .c3 {
+    width: 33%;
+    display: inline-block;
+}
+.astro_object {
+    background-color: white;
+    border: 5px solid #B582DD;
+    padding: 2%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+.astro_object a {
+    color: black;
+    text-decoration: none;
+}
+.astro_object a:hover {
+    color: #67219D;
+}
+.astro_object img {
+    max-width: 90%;
+    max-height: 90%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #67219D;
+    padding-bottom: 5%;
+    padding-top: 2%;
+}
+footer img {
+    max-width: 5%;
+    padding: 1%;
+}
+
+@media screen and (max-width: 1007px) {
+    #observing .c1, #observing .c2, #observing .c3 {
+        width: 100%;
+    }
+    #observing .planets, #observing .stars {
+        width: 49%;
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #about .c1, #about .c2 img {
+        width: 100%;
+    }
+    #events .c1 img {
+        width: 100%;
+        margin-bottom: 2%;
+    }
+    #observing .c1, #observing .c2, #observing .c3 {
+        width: 100%;
+    }
+    #observing .planets, #observing .stars {
+        width: 100%;
+    }
+}
+
