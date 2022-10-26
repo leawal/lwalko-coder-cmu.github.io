@@ -5,13 +5,21 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- import all the various sizes of the stylesheet -->
         <link href="css/style.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet" meida="screen and (max-width: 1007px)">
-        <link href="css/style.css" rel="stylesheet" meida="screen and (max-width: 640px)">
+        <link href="css/style.css" rel="stylesheet" media="screen and (max-width: 1007px)">
+        <link href="css/style.css" rel="stylesheet" media="screen and (max-width: 640px)">
+        <!-- import all the scripts -->
+        <script src="js/question.js"></script> 
+        <script src="js/color.js"></script>
+        <script src="js/img.js"></script>
+        <script src="js/scroll.js"></script>
     </head>
     <body>
         <header>
+            <!-- the logo links to the home page -->
             <a href="index.html"><img src="images/prim_fullname_white.png" alt="Astro Club Logo"></a>
+            <!-- navigation bar on the bottom of the top of the page -->
             <nav>
                 <ul>
                     <li><a href="about.html">About</a></li>
@@ -21,6 +29,7 @@
             </nav>
         </header>
         <div id="content">
+            <!-- about section that has a picture of the members of the club and a short description (img on right) -->
             <div id="about">
                 <h2>Who We Are</h2>
                 <div class="c1">
@@ -36,6 +45,7 @@
                 </div>
             </div>
             <br><br>
+            <!-- contains all of the event information, img and description pairing (img on left) -->
             <div id="events">
                 <h2>Upcoming Event</h2>
                 <div class="c1">
@@ -47,13 +57,22 @@
                         institutions of the world. Although pioneering in pure research is 
                         the chief function of the observatory, throughout its long history the observatory 
                         has always allowed the public to become acquainted with the wonders of 
-                        the night sky by actual observations and illustrated lectures.
+                        the night sky by actual observations and illustrated lectures. 
                     </p>
+                    <!-- button that links to more information (if said page was made) -->
                     <a href="events.html"><button>Learn More</button></a>
                 </div>
-                
+            </div>
+            <br><br>
+            <!-- the card that correlated to the 1st assignment requirement -->
+            <div id="question">
+                <h2>When is it?</h2>
+                <!-- will only be revealed when mouse hovers over div card -->
+                <span id="answer">10/31/2022 at 6:30 pm</span>
             </div>
             <br>
+            <!-- All of the astronomy planets and stars, img is only revealed when hovering over the card -->
+            <!-- correlates to 2nd assignment requirement -->
             <div id="observing">
                 <h2>Visible Planets and Stars Tonight</h2>
                 <div class="planets">
@@ -97,8 +116,18 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            <br>
+            <!-- color change card that correlated to 3rd assignment requirement -->
+            <div id="color">
+                <h2>Click me to change my color!</h2>
+                <button id="colorBtn">Color Swap</button>
+            </div>
+            <br>
         </div>
+        <!-- button that won't appear until you are halfway down the page -->
+        <!-- correlates to 4th assignment requirement -->
+        <button id="backToTop">Top</button>
+        <!-- footer with social links -->
         <footer>
             <div style="text-align:center">
                 <a href="https://www.facebook.com/cmuastroc/"><img src="images/facebook_icon.png" alt="Facebook"></a>
