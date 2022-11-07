@@ -1,235 +1,38 @@
 /* grab the fonts */
 @font-face {
-    font-family: 'merriweather';
-    src: url('../fonts/Merriweather-Regular.ttf');
+    font-family: 'questrial';
+    src: url('../fonts/Questrial-Regular.ttf');
 }
 @font-face {
-    font-family: 'cabin';
-    src: url('../fonts/Cabin-VariableFont_wdth,wght.ttf');
+    font-family: 'raleway';
+    src: url('../fonts/Raleway-VariableFont_wght.ttf');
 }
-
 /* generic body stats */
 body {
-    margin: 0;
-    font-family: 'cabin';
+    font-family: 'raleway';
     font-size: 1em;
+    /* background-color: rgb(225, 248, 255); */
 }
 
 /* set up the headers font size */
-h1, h2, h3, h4 {
-    font-family: 'merriweather';
-    color: #67219D;
-}
-h2 {
-    font-size: 2em;
+h1 {
+    font-family: 'questrial';
+    color: #ffffff;
+    font-size: 5em;
 }
 h3 {
-    font-size: 1.5em;
-}
-
-/* set up the header logo and nav bar */
-header {
-    background-color: #7C3CAE;
-    display: block;
-    width: 100%;
-    margin: 0;
-}
-header img {
-    min-width: 150px;
-    width: 12%;
-    margin: 2% 6%;
-}
-header nav {
-    padding-bottom: 1%;
-    padding-top: 1%;
-    background-color:#67219D;
-}
-header nav li a {
-    text-decoration: none;
-    font-size: 1.5em;
-    color: white;
-    text-align: center;
-    
-}
-header nav a:hover {
-    text-decoration: underline;
-    padding-bottom: 1%;
-    padding-top: 1%;
-}
-header li {
-    display: inline;
-    padding: 5% 5% 5% 2%;
-    text-decoration:none;
-}
-
-/* all bold words are purple */
-b {
-    color: #67219D;
-}
-
-/* make sure the button aligns stylistically with the rest of the site */
-button {
-    color: white;
-    border: none;
-    text-align: center;
-    background-color:#67219D;
-    padding: 1%;
-}
-button:hover {
-    background-color:#7C3CAE;
-}
-
-/* set up the generic non header part of the page */ 
-#content {
-    width: 90%;
-    margin: 5%;
-}
-
-/* sets up how the about section looks like, and arranges the columns */
-#about {
-    display: inline-block;
-}
-#about h2 {
-    margin-bottom: 1%;
-}
-#about .c1 {
-    width: 35%;
-    margin-right: 5%;
-    float: left;
-}
-#about .c2 img {
-    width: 60%;
-}
-
-/* sets up various cards and make them all look the same with the style elements */
-#question, #color {
-    width: 96%;
-}
-#events, #question, #color {
-    background-color: #D5B3F0;
-    padding: 2%;
-    padding-bottom: 5%;
-    padding-top: 0.5%;
-    display: inline-block;
-}
-
-/* arranges the event card column arrangements */
-#events .c1 img {
-    width: 32%;
-    min-height: 180px;
-    margin-right: 5%;
-    float: left;
-    object-fit: cover;
-}
-#events .c2 button {
-    float: right;
-    clear: both;
-    margin-right: 5%;
-    color: white;
-    border: none;
-    text-align: center;
-    background-color:#67219D;
-    padding: 1%;
-}
-#events .c2 button:hover {
-    background-color:#7C3CAE;
-}
-
-/* various astronomical objects that show up in a grid, columns used to arrange it */
-#observing {
-    margin: auto;
-}
-#observing .c1, #observing .c2, #observing .c3 {
-    width: 33%;
-    float: left;
-}
-
-/* makes the answer to the question on the #question card appear */
-#answer {
-    visibility: hidden;
-}
-
-/* the appearance and the fixed behavior of the back to top button */
-#backToTop {
-    position: fixed;
-    bottom: 2%;
-    right: 2%;
-    z-index: 99;
-    display: none;
-    width: 100px;
-    height: 100px;
+    font-family: 'questrial';
+    color: #ffffff;
     font-size: 2em;
-    background-color: rgb(67, 0, 67);
 }
-#backToTop:hover {
-    background-color: rgb(195, 14, 195);
-}
-
-/* changes the style of the class astro objects and sets up the images/text to appear and disappear */
-.astro_object {
-    background-color: white;
-    border: 5px solid #B582DD;
-    padding: 2%;
-    margin-right: 5%;
-    margin-bottom: 5%;
-    text-align: center;
-    height: 200px;
-}
-.astro_object a {
-    color: black;
-    text-decoration: none;
-    display: block;
-}
-.astro_object a:hover {
-    color: #67219D;
-}
-.astro_object img {
-    max-width: 90%;
-    max-height: 90%;
-    width: 200px;
-    height: 200px;
-    display: none;
-    object-fit: cover;
-    margin-left: auto;
-    margin-right: auto;
+h5 {
+    font-family: 'questrial';
+    color: #304ee5;
+    font-size: 2em;
 }
 
-/* bottom of the page that includes links to socials */
-footer {
-    background-color: #67219D;
-    padding-bottom: 5%;
-    padding-top: 2%;
+.dropdown-menu > li > a:hover {
+    background-image: none;
+    background-color: #5f79fb;
+    color: white;
 }
-footer img {
-    max-width: 5%;
-    padding: 1%;
-}
-
-/* changes the column layouts based on the window size (iPad approx) */
-@media screen and (max-width: 1007px) {
-    #observing .c1, #observing .c2, #observing .c3 {
-        width: 100%;
-    }
-    #observing .planets, #observing .stars {
-        width: 49%;
-        display: inline-block;
-    }
-}
-
-/* changes the column layouts based on the window size (phone approx) */ 
-@media screen and (max-width: 640px) {
-    #about .c1, #about .c2 img {
-        width: 100%;
-    }
-    #events .c1 img {
-        width: 100%;
-        margin-bottom: 2%;
-    }
-    #observing .c1, #observing .c2, #observing .c3 {
-        width: 100%;
-    }
-    #observing .planets, #observing .stars {
-        width: 100%;
-    }
-}
-

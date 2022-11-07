@@ -1,139 +1,306 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <!-- https://lwalko-coder-cmu.github.io/ -->
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- import all the various sizes of the stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet" media="screen and (max-width: 1007px)">
-        <link href="css/style.css" rel="stylesheet" media="screen and (max-width: 640px)">
-        <!-- import all the scripts -->
-        <script src="js/question.js"></script> 
-        <script src="js/color.js"></script>
-        <script src="js/img.js"></script>
-        <script src="js/scroll.js"></script>
-    </head>
-    <body>
-        <header>
-            <!-- the logo links to the home page -->
-            <a href="index.html"><img src="images/prim_fullname_white.png" alt="Astro Club Logo"></a>
-            <!-- navigation bar on the bottom of the top of the page -->
-            <nav>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="catalogue.html">Cosmic Catalogue</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div id="content">
-            <!-- about section that has a picture of the members of the club and a short description (img on right) -->
-            <div id="about">
-                <h2>Who We Are</h2>
-                <div class="c1">
-                    <p>Founded in 1967, we are a diverse group of Carnegie Mellon 
-                        undergrads, graduate students, and community members who are 
-                        astronomy and space enthusiasts. We meet throughout the fall 
-                        and spring semesters, discuss astronomy, take trips to 
-                        observatories and museums, and go observing whenever we get the 
-                        chance (admittedly infrequent in cloudy Pittsburgh).</p>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <title>Fish Market</title>
+  </head>
+  <body>
+
+    <!-- USED MOSTLY FLUID TRANSITION PATTERN -->
+
+    <header>
+
+        <!-- This is a carousel that is the header of the site -->
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <!-- The first image with the text Fish Market on top of it -->
+              <div class="carousel-item active" style="
+                    background-image: url('img/fischaquarium.jpg');
+                    height: 300px;
+                    "
+              >
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Fish Market</h1>
                 </div>
-                <div class="c2">
-                    <img src="images/astro_club.jpg" alt="Members of the Club">
+              </div>
+
+              <!-- Second image with the text The One Stop... -->
+              <div class="carousel-item" style="
+                    background-image: url('img/Aquarium_Algae.jpg');
+                    height: 300px;
+                    "
+              >
+                <div class="d-flex justify-content-center align-items-center h-200">
+                    
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>The One Stop Location for All Fish Needs</h1>
+                    </div>
                 </div>
+              </div>
+
+              <!-- Third image with text -->
+              <div class="carousel-item" style="
+                    background-image: url('img/aquariums.jpg');
+                    height: 300px;
+                    "
+              >
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Coming to a City Near You!</h1>
+                </div>
+
+                <!-- All three images are set to be the same height, all background images so they expand across width of screen -->
+              </div>
             </div>
-            <br><br>
-            <!-- contains all of the event information, img and description pairing (img on left) -->
-            <div id="events">
-                <h2>Upcoming Event</h2>
-                <div class="c1">
-                    <img src="images/allegheny.jpeg" alt="Allegheny Observatory">
-                </div>
-                <div class="c2">
-                    <h3>Allegheny Observatory</h3>
-                    <p>The Allegheny Observatory is one of the major astronomical research 
-                        institutions of the world. Although pioneering in pure research is 
-                        the chief function of the observatory, throughout its long history the observatory 
-                        has always allowed the public to become acquainted with the wonders of 
-                        the night sky by actual observations and illustrated lectures. 
-                    </p>
-                    <!-- button that links to more information (if said page was made) -->
-                    <a href="events.html"><button>Learn More</button></a>
-                </div>
-            </div>
-            <br><br>
-            <!-- the card that correlated to the 1st assignment requirement -->
-            <div id="question">
-                <h2>When is it?</h2>
-                <!-- will only be revealed when mouse hovers over div card -->
-                <span id="answer">10/31/2022 at 6:30 pm</span>
-            </div>
-            <br>
-            <!-- All of the astronomy planets and stars, img is only revealed when hovering over the card -->
-            <!-- correlates to 2nd assignment requirement -->
-            <div id="observing">
-                <h2>Visible Planets and Stars Tonight</h2>
-                <div class="planets">
-                    <div class="c1">
-                        <div class="astro_object">
-                            <img src="images/jupiter.jpg" alt="Jupiter">
-                            <a href="catalogue.html"><h3>Jupiter</h3></a>
-                        </div>
-                    </div>
-                    <div class="c2">
-                        <div class="astro_object">
-                            <img src="images/mars.jpg" alt="Mars">
-                            <a href="catalogue.html"><h3>Mars</h3></a>
-                        </div>
-                    </div>
-                    <div class="c3">
-                        <div class="astro_object">
-                            <img src="images/saturn.jpg" alt="Saturn">
-                            <a href="catalogue.html"><h3>Saturn</h3></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="stars">
-                    <div class="c1">
-                        <div class="astro_object">
-                            <img src="images/pegasus.png" alt="Pegasus Constellation">
-                            <a href="catalogue.html"><h3>Pegasus</h3></a>
-                        </div>
-                    </div>
-                    <div class="c2">
-                        <div class="astro_object">
-                            <img src="images/aquarius.png" alt="Aquarius Constellation">
-                            <a href="catalogue.html"><h3>Aquarius</h3></a>
-                        </div>
-                    </div>
-                    <div class="c3">
-                        <div class="astro_object">
-                            <img src="images/grus.png" alt="Grus Constellation">
-                            <a href="catalogue.html"><h3>Grus</h3></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <!-- color change card that correlated to 3rd assignment requirement -->
-            <div id="color">
-                <h2>Click me to change my color!</h2>
-                <button id="colorBtn">Color Swap</button>
-            </div>
-            <br>
         </div>
-        <!-- button that won't appear until you are halfway down the page -->
-        <!-- correlates to 4th assignment requirement -->
-        <button id="backToTop">Top</button>
-        <!-- footer with social links -->
-        <footer>
-            <div style="text-align:center">
-                <a href="https://www.facebook.com/cmuastroc/"><img src="images/facebook_icon.png" alt="Facebook"></a>
-                <a href="https://discord.gg/cFSVv3w8"><img src="images/discord_icon.png" alt="Discord"></a>
-                <a href="mailto: lwalko@andrew.cmu.edu"><img src="images/mail_icon.png"></a>
+
+        <!-- the navbar extends across the screen -->
+        <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+            <div class="container-fluid">
+
+                <!-- when the screen is too small, it turns into a hamburger icon to condense space -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <!-- The three big tabs -->
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <!-- Home button, the current page -->
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+
+                  <!-- Dropdown button, Shop -->
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Shop
+                    </a>
+
+                    <!-- The three dropdown menus of fish, tanks, food -->
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Fish</a></li>
+                      <li><a class="dropdown-item" href="#">Tanks</a></li>
+                      <li><a class="dropdown-item" href="#">Food</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- The third page, the Cart -->
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Cart</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-        </footer>
+          </nav>
+
+    </header>
+    <!-- End of header -->
+    <br><br>
+
+    <!-- The container contains pretty much all of the content -->
+    <div class="container text-center">
+
+        <!-- Row contains the welcome card and the accordian -->
+        <div class="row">
+
+            <!-- On small screen, the card spreads across the entire screen, otherwise takes up half of the space -->
+            <div class="col col-12 col-md-6">
+                <div class="card text-bg-info mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: black;">Welcome to Fish Market</h5>
+                        <p class="card-text">We are a small business that began in the evening of 11/10/2022 as an idea for a Mobile Web Design class! Even though we don't own any fish, tanks or fish food, we are somehow wildly popular and successful. Due to this, we are currently expanding and will be purchasing an actual building. It is unknown when this aquisition will be made, but at the earliest, in 20 years! How exciting!</p>
+                    </div>
+                </div>
+                <br>
+            </div>
+            
+            <!-- On small screen, the accordian speads across the entire screen, otherwise 50% -->
+            <div class="col col-12 col-md-6 text-start">
+                
+                <!-- Title for the accordian -->
+                <h5>Featured Fish</h5>
+
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+
+                        <!-- First accordian item, Neon Tetra -->
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                          Neon Tetra
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+
+                            <!-- Each accordian contains a row -->
+                            <div class="row">
+                                
+                                <!-- small screens, the text spreads across the entire screen, otherwise text and image share space -->
+                                <div class="col col-12 col-md-6">
+                                    <strong>On Sale!</strong> This tiny little fish features beautiful blue and red scales. It's native to the Amazon basin of South America, but we have quite a few. Wow! They are actually very common pets, so us having one isn't unusual.
+                                </div>
+                                <div class="col col-12 col-md-6">
+                                    <img src="img/neon-tetra.jpg" class="img-fluid" alt="Neon Tetra">
+                                </div>
+                            </div>
+                            
+                            <br>
+
+                            <!-- Buy Now button that will cause a toast to pop up -->
+                            <button type="button" class="btn btn-primary" id="tetraToastBtn">Buy Now</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+
+                        <!-- Second accordion item, Rainbowfish -->
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Rainbowfish
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+
+                             <!-- Each accordion contains a row -->
+                            <div class="row">
+
+                                <!-- small screens, the text spreads across the entire screen, otherwise text and image share space -->
+                                <div class="col col-12 col-md-6">
+                                    <strong>Supply Running Low!</strong> This beautiful fish features rainbow scales. Quite the charmer, too!
+                                </div>
+                                <div class="col col-12 col-md-6">
+                                    <img src="img/rainbow.jpg" class="img-fluid" alt="Rainbowfish">
+                                </div>
+                            </div>
+                            <br>
+
+                            <!-- Buy Now button that will cause a toast to pop up -->
+                            <button type="button" class="btn btn-primary" id="rainbowToastBtn">Buy Now</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+
+                        <!-- Third accordion item, Golden Dwarf Bard -->
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Golden Dwarf Barb
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+
+                             <!-- Each accordion contains a row -->
+                                <div class="row">
+
+                                <!-- small screens, the text spreads across the entire screen, otherwise text and image share space -->
+                                    <div class="col col-12 col-md-6">
+                                        <strong>Buy Two for the Price of One!</strong> Cute little fellows with pretty yellow scales. The best things come in two, and these guys are no exception!
+                                    </div><br>
+                                    <div class="col col-12 col-md-6">
+                                        <img src="img/Golden-Dwarf-Barb.png" class="img-fluid" alt="Golden Dwarf Bard">
+                                    </div>
+                                    
+                                </div><br>
+                                 
+                            <!-- Buy Now button that will cause a toast to pop up -->
+                                <button type="button" class="btn btn-primary" id="dwarfToastBtn">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <br>
+
+    <!-- Within the container so that they can stack! -->
+    <div aria-live="polite" aria-atomic="true" class="position-relative">
+
+        <!-- Positioned in the bottom right -->
+        <div class="toast-container bottom-0 end-0 p-3">
+
+            <!-- Tetra toast, specific text to show that the user did in fact buy what they think they did -->
+            <div id="tetraToast" class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                  <div class="toast-body">
+                    Added to Neon Tetra to Cart!
+                  </div>
+                  <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+
+            <!-- Rainbow toast, specific text to show that the user did in fact buy what they think they did -->
+            <div id="rainbowToast" class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                  <div class="toast-body">
+                    Added Rainbowfish to Cart!
+                  </div>
+                  <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+
+            <!-- Dwarf toast, specific text to show that the user did in fact buy what they think they did -->
+            <div id="dwarfToast" class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                  <div class="toast-body">
+                    Added Golden Dwarf Barb to Cart!
+                  </div>
+                  <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script details whether to show the toast or not -->
+    <script>
+
+        // first grabs the various buy now buttons
+        const tetraTrigger = document.getElementById('tetraToastBtn')
+        const rainbowTrigger = document.getElementById('rainbowToastBtn')
+        const dwarfTrigger = document.getElementById('dwarfToastBtn')
+
+        // then grabs the toasts themselves
+        const tetraLiveExample = document.getElementById('tetraToast')
+        const rainbowLiveExample = document.getElementById('rainbowToast')
+        const dwarfLiveExample = document.getElementById('dwarfToast')
+
+        // when the trigger is clicked, toast is shown
+        if (tetraTrigger) {
+            tetraTrigger.addEventListener('click', function onClick() {
+            const toast = new bootstrap.Toast(tetraLiveExample)
+            toast.show()
+            });
+        }
+
+        // when the trigger is clicked, toast is shown
+        if (rainbowTrigger) {
+            rainbowTrigger.addEventListener('click', function onClick() {
+            const toast = new bootstrap.Toast(rainbowLiveExample)
+            toast.show()
+            });
+        }
+
+        // when the trigger is clicked, toast is shown
+        if (dwarfTrigger) {
+            dwarfTrigger.addEventListener('click', function onClick() {
+            const toast = new bootstrap.Toast(dwarfLiveExample)
+            toast.show()
+            });
+        }
+    </script>
+    
     </body>
 </html>
